@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our pets</title>
+    <link rel="stylesheet" href="../../assets/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="script.js" type="module" defer></script>
+    <script src="pagination.js" defer></script>
+    <script src="burger.js" defer></script>
+
+</head>
+
+<body>
+    <div class="mobile-mask" ></div>
+    <header class="header">
+        <div class="header-container wrapper">
+            <div class="menu-hamburger" id="menu-burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+            
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../../index.html" class="logo-link">
+                        <h1 class="title-logo">Cozy House</h1>
+                    </a>
+                    <p class="subtitle-logo">Shelter for pets in Boston</p>
+                </div>
+                <nav class="menu-links">
+                    <ul class="menu-container">
+                        <li class="menu-item"><a href="../../index.html" class="munu-link active">About the shelter</a>
+                        </li>
+                        <li class="menu-item"><a href="index.html" class="munu-link">Our pets</a></li>
+                        <li class="menu-item"><a href="../../index.html#help" class="munu-link">Help the shelter</a>
+                        </li>
+                        <li class="menu-item"><a href="#footer" class="munu-link">Contacts</a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile-menu">
+                    <div class="mobile-logo">
+                        <a href="../../index.html" class="logo-link">
+                            <h1 class="title-logo">Cozy House</h1>
+                        </a>
+                        <p class="subtitle-logo">Shelter for pets in Boston</p>
+                    </div>
+                    <ul class="menu-container">
+                        <li class="menu-item"><a href="../../index.html" class="menu-link active">About the shelter</a></li>
+                        <li class="menu-item"><a href="index.html" class="menu-link">Our pets</a></li>
+                        <li class="menu-item"><a href="../../index.html#help" class="menu-link">Help the shelter</a></li>
+                        <li class="menu-item"><a href="#footer" class="menu-link">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="popup-pets">
+        <div class="popup-mask"></div>
+        <div class="popup-container" id="popup-container">
+            <button class="popup-close pet-btn"> <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003Z" fill="#292929"/>
+                </svg> </button>
+            <div class="popup-image"><img src="../../assets/images/modal-pets-jennifer.png" alt="jennifer"></div>
+            <div class="popup-content">
+                <div class="popup-title">Jennifer</div>
+                <div class="popup-subtitle">Dog - Labrador</div>
+                <div class="popup-text">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</div>
+                <ul class="popup-about" id="popup-about">
+                    <li class="popup-desc desc-age"><span class="text-bold">Age:&#160</span>2 months</li>
+                    <li class="popup-desc desc-inoculations"><span class="text-bold">Inoculations:&#160</span>none</li>
+                    <li class="popup-desc desc-diseases"><span class="text-bold">Diseases:&#160</span>none</li>
+                    <li class="popup-desc desc-parasites"> <span class="text-bold">Parasites:&#160</span>none</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="pets">
+        <div class="pets-container wrapper">
+            <div class="pets-content">
+                <div class="title-pets">Our friends who <br>are looking for a house</div>
+                <div class="swiper-container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper" id="swiper-wrapper">
+                            
+                        </div>
+                    </div>
+                    <nav class="pagination-container">
+                        <ul class="pagination-list">
+                            <li class="pagination-item">
+                                <button id="firstPage" data-disabled=""
+                                    class="pagination-button prev-button" disabled>&lt;&lt;</button>
+                            </li>
+                            <li class="pagination-item">
+                                <button id="prevPage" data-disabled=""
+                                    class="pagination-button prev-button prev-page">&lt;</button>
+                            </li>
+                            <li class="pagination-item">
+                                <button id="currentPage" class="pagination-button current-page">1</button>
+                            </li>
+                            <li class="pagination-item">
+                                <button id="nextPage" data-disabled=""
+                                    class="pagination-button next-button next-page">&gt;</button>
+                            </li>
+                            <li class="pagination-item">
+                                <button id="lastPage" data-disabled=""
+                                    class="pagination-button next-button">&gt;&gt;</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer">
+        <div class="footer-container wrapper">
+            <div class="footer-content">
+                <div class="footer-contacts">
+                    <div class="title-footer">For questions and suggestions</div>
+                    <div class="mail-contacts text-contacts"><a href="mailto:email@shelter.com"
+                            class="email icons-contact"><img src="../../assets/icons/icon-email.svg" alt="mail">
+                            email@shelter.com</a></div>
+                    <div class="phone-contacts text-contacts"><a href="tel:email@shelter.com"
+                            class="phone icons-contact"><img src="../../assets/icons/icon-phone.svg" alt="phone"> +13
+                            674 567
+                            75 54</a></div>
+                </div>
+                <div class="footer-locations">
+                    <div class="title-footer">We are waiting for your visit</div>
+                    <div class="location-contacts text-contacts"><a href="https://goo.gl/maps/v7JWfufoR3NunBMN6"
+                            target="_blank" class="location icons-contact"><img src="../../assets/icons/icon-marker.svg"
+                                alt=""> 1 Central Street, Boston (entrance from the store)</a></div>
+                    <div class="location-contacts text-contacts"><a href="https://goo.gl/maps/HEmMUi4xC89tzcKEA"
+                            target="_blank" class="location icons-contact"><img src="../../assets/icons/icon-marker.svg"
+                                alt=""> 18 South Park, London </a></div>
+                </div>
+                <div class="footer-image"></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
